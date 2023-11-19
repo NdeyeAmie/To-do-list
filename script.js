@@ -76,13 +76,13 @@ function modifierTache(e) {
     const key = e.target.parentNode.getAttribute('data-key');
     
     
-    const taskToUpdate = toutesLesTaches.find(item => item.getAttribute('data-key') === key);
+    const textToUpdate = toutesLesTaches.find(item => item.getAttribute('data-key') === key);
 
-    if (taskToUpdate) {
+    if (textToUpdate) {
 
-        const newText = prompt('Enter the new task text:', taskToUpdate.querySelector('span').innerText);
+        const newText = prompt('Enter the new text text:', textToUpdate.querySelector('span').innerText);
         if (newText !== null) {
-            taskToUpdate.querySelector('span').innerText = newText;
+            textToUpdate.querySelector('span').innerText = newText;
         }
     }
 }
